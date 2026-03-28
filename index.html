@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <!--Bg Image-->
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
+      <img src="./images/header-bg-color.png" alt="" class="w-full" />
+    </div>
+    <!-- Scroll Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent">
+      <div
+        id="scroll-bar"
+        class="h-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] w-0 transition-all duration-150 ease-out"
+      ></div>
+    </div>
+    <!-- Nave bar -->
+    <nav
+      class="w-full fixed md:px-8 lg:px-[8%] py-4 px-[5%] flex items-center justify-between z-50"
+    >
+      <img
+        src="./images/logo.png"
+        alt="logo"
+        class="w-28 cursor-pointer mr-14"
+      />
+      <ul
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-white bg-opacity-50"
+      >
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About me </a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact me</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        
+        <a
+          href="#contact"
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          >Connect
+          <img src="./images/arrow-icon.png" alt="arrow" class="w-3" />
+        </a>
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+          <img src="./images/menu-black.png" alt="" class="w-6" />
+        </button>
+      </div>
+      <!--mobile menu-->
+      <ul
+        id="sideMenu"
+        class="flex md:hidden flex-col gap-5 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 bg-rose-50 transition duration-500"
+      >
+        <div class="absolute right-6 top-6" onclick="closeMenu()">
+          <img
+            src="./images/close-black.png"
+            alt=""
+            class="w-5 cursor-pointer"
+          />
+        </div>
+
+        <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">About me </a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
+      </ul>
+    </nav>
+    <!--Header -->
+    <div
+      class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
+      <img
+        src="./images/profile-img.png"
+        alt="profile"
+        class="rounded-full w-32"
+      />
+      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+        Hi! I'm Atul <img src="./images/hand-icon.png" alt="" class="w-6" />
+      </h3>
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px]">
+        frontend web developer
+      </h1>
+      <p class="max-w-2xl mx-auto">I am a passionate Frontend Developer specializing in React and Next.js, 
+        dedicated to creating seamless user interfaces and high-performance web applications.
+      </p></p>
+
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a
+          href="#contact"
+          class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2"
+          >contact me <img src="./images/right-arrow-white.png " class="w-4"
+        /></a>
+        <a
+          href="#contact"
+          class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white"
+          >my resume <img src="./images/download-icon.png " class="w-4" /></a
+        ><!--add file path in href and add text download-->
+      </div>
+    </div>
+    <!--About me -->
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">Introduction</h4>
+      <h2 class="text-center text-5xl">About me</h2>
+
+      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="./images/user-image.png"
+            class="w-64 sm:w-80 rounded-3xl max-w-none imageReveal"
+          />
+        </div>
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl">
+            I am a Frontend Developer with a background in Computer Applications. 
+            I thrive at the intersection of design and functionality, transforming 
+            complex problems into elegant, intuitive digital solutions. My goal is 
+            to build products that are not only beautiful but accessible and fast.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <li
+              class="border-[0.5px] border-gray-500 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+              <p class="text-gray-600 text-sm">
+                HTML, CSS, JavaScript React Js, Next Js
+              </p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-500 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+              <p class="text-gray-600 text-sm">BCA</p>
+            </li>
+            <li
+              class="border-[0.5px] border-gray-500 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+            >
+              <img src="./images/project-icon.png" alt="" class="w-7 mt-3" />
+              <h3 class="my-4 font-semibold text-gray-700">Project</h3>
+              <p class="text-gray-600 text-sm">Built more than 5 projects</p>
+            </li>
+          </ul>
+          <h4 class="my-6 text-gray-700">Tools i use</h4>
+          <ul class="flex items-center gap-3 sm:gap-5">
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg coursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="./images/vscode.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg coursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="./images/firebase.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg coursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="./images/mongodb.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg coursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="./images/figma.png" alt="" class="w-5 sm:w-7" />
+            </li>
+            <li
+              class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg coursor-pointer hover:-translate-y-1 duration-500"
+            >
+              <img src="./images/git.png" alt="" class="w-5 sm:w-7" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Services-->
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">What i offer</h4>
+      <h2 class="text-center text-5xl">My services</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        I provide comprehensive digital solutions ranging from initial UI design to 
+        fully functional, responsive web and mobile applications.
+      </p>
+      <div
+        class="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-4 gap-4 my-10"
+      >
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
+        >
+          <img src="./images/web-icon.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">Web design</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Building responsive, fast-loading websites using modern frameworks like React and Next.js.
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4"
+          /></a>
+        </div>
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
+        >
+          <img src="./images/mobile-icon.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">Mobile app</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Creating cross-platform mobile experiences with clean architecture and smooth performance.
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4"
+          /></a>
+        </div>
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
+        >
+          <img src="./images/ui-icon.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">UI/UX design</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Designing user-centric interfaces that are intuitive, accessible, and visually striking.
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4"
+          /></a>
+        </div>
+        <div
+          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
+        >
+          <img src="./images/graphics-icon.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">Graphics design</h3>
+          <p class="text-sm text-gray-600 leading-5">
+            Developing brand identities and graphic assets that communicate your message effectively.
+          </p>
+          <a href="" class="flex items-center gap-2 text-sm mt-5"
+            >Read more
+            <img src="./images/right-arrow-bold.png" alt="" class="w-4"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!--My work-->
+    <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg">My portfolio</h4>
+      <h2 class="text-center text-5xl">My latest work</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+        Explore a collection of my recent projects, showcasing my expertise in 
+        frontend architecture, animations, and API integrations.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
+        <div
+          class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">Frontend project</h2>
+              <p class="text-sm text-gray-700">Web Design</p>
+            </div>
+            <div
+              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+            >
+              <img src="./images/send-icon.png" class="w-5" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">E-commerce App</h2>
+              <p class="text-sm text-gray-700">Next.js & Tailwind</p>
+            </div>
+            <div
+              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+            >
+              <img src="./images/send-icon.png" class="w-5" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">Dashboard UI</h2>
+              <p class="text-sm text-gray-700">React & Charts</p>
+            </div>
+            <div
+              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+            >
+              <img src="./images/send-icon.png" class="w-5" alt="" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+        >
+          <div
+            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+          >
+            <div>
+              <h2 class="font-semibold">Weather API</h2>
+              <p class="text-sm text-gray-700">JavaScript Fetch</p>
+            </div>
+            <div
+              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+            >
+              <img src="./images/send-icon.png" class="w-5" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="w-max flex item-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20"
+      >
+        Show more</a
+      >
+    </div>
+    <!-- Contact-->
+    <div
+      id="contact"
+      class="w-full px-[12%] py-10 scroll-mt-20 bg-[uel('./images/footer-bg-color.png')] bg-no-repeat bg-[legth:90%_auto] bg-center"
+    >
+      <h4 class="text-center mb-2 text-lg">Connect with me</h4>
+      <h2 class="text-center text-5xl">Get in touch</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+       I'm currently looking for new opportunities. Whether you have a question 
+        or just want to say hi, I'll try my best to get back to you!
+      </p>
+
+      <form
+        method="post"
+        action="https://api.web3forms.com/submit"
+        class="max-2xl mx-auto"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="34a8a4f9-9457-47aa-a6f3-56ea263a832c"
+        />
+
+        <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+          <input
+            type="text"
+            name="name"
+            placeholder=" Enter you name"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder=" Enter you email"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+          />
+        </div>
+        <textarea
+          name="message"
+          rows="6"
+          placeholder="Enter your message"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          required
+        ></textarea>
+        <button
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
+        >
+          Submit now <img src="./images/right-arrow-white.png" alt="" />
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer-->
+    <div class="mt-20">
+      <div class="text-center">
+        <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2" />
+        <div class="w-max flex items-center gap-2 mx-auto">
+          <img src="./images/mail_icon.png" alt="" class="w-6" />
+          atultanwar08072812@gmail.com
+        </div>
+      </div>
+      <div
+        class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6"
+      >
+        <p>2025 atul . All rights reserved</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+          <li><a href=""> GitHub</a></li>
+          <li><a href=""> LinkedIn</a></li>
+          <li><a href=""> Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
