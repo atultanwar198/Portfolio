@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="/tailwind.config.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
   </head>
   <body class="overflow-x-hidden">
@@ -30,7 +30,7 @@
         class="w-28 cursor-pointer mr-14"
       />
       <ul
-        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-white bg-opacity-50"
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-white bg-opacity-50 nav-bar"
       >
         <li><a href="#top">Home</a></li>
         <li><a href="#about">About me </a></li>
@@ -39,7 +39,6 @@
         <li><a href="#contact">Contact me</a></li>
       </ul>
       <div class="flex items-center gap-4">
-        
         <a
           href="#contact"
           class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
@@ -82,24 +81,25 @@
       <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
         Hi! I'm Atul <img src="./images/hand-icon.png" alt="" class="w-6" />
       </h3>
-      <h1 class="text-3xl sm:text-6xl lg:text-[66px]">
-        frontend web developer
-      </h1>
-      <p class="max-w-2xl mx-auto">I am a passionate Frontend Developer specializing in React and Next.js, 
-        dedicated to creating seamless user interfaces and high-performance web applications.
-      </p></p>
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px]">Frontend Developer</h1>
+      <p class="max-w-2xl mx-auto">
+        Hi, I'm a Frontend Developer passionate about creating modern,
+        responsive, and user-friendly websites. I transform ideas and designs
+        into fast, interactive, and accessible web experiences using the latest
+        frontend technologies.
+      </p>
 
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
           href="#contact"
-          class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2"
-          >contact me <img src="./images/right-arrow-white.png " class="w-4"
-        /></a>
+          class="px-10 font-semibold py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2"
+          >Contact Me <img src="./images/mail.png " class="w-4" />
+        </a>
         <a
           href="#contact"
           class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white"
-          >my resume <img src="./images/download-icon.png " class="w-4" /></a
-        ><!--add file path in href and add text download-->
+          >my resume <img src="./images/download-icon.png " class="w-4" />
+        </a>
       </div>
     </div>
     <!--About me -->
@@ -114,21 +114,24 @@
             class="w-64 sm:w-80 rounded-3xl max-w-none imageReveal"
           />
         </div>
-        <div class="flex-1">
+        <div class="flex-1 about-section">
           <p class="mb-10 max-w-2xl">
-            I am a Frontend Developer with a background in Computer Applications. 
-            I thrive at the intersection of design and functionality, transforming 
-            complex problems into elegant, intuitive digital solutions. My goal is 
-            to build products that are not only beautiful but accessible and fast.
+            I'm a Frontend Developer who enjoys building clean, responsive, and
+            engaging user interfaces. I specialize in developing modern web
+            applications with React, JavaScript, HTML, CSS, and Tailwind CSS. My
+            focus is on creating intuitive user experiences, writing
+            maintainable code, and continuously learning new technologies to
+            stay up to date with industry trends.
           </p>
           <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
             <li
               class="border-[0.5px] border-gray-500 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
             >
               <img src="./images/code-icon.png" alt="" class="w-7 mt-3" />
-              <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+              <h3 class="my-4 font-semibold text-gray-700">Skills</h3>
               <p class="text-gray-600 text-sm">
-                HTML, CSS, JavaScript React Js, Next Js
+                HTML5, CSS3, JavaScript (ES6+), TypeScript, React, Next.js,
+                Tailwind CSS, Bootstrap, Redux
               </p>
             </li>
             <li
@@ -136,7 +139,9 @@
             >
               <img src="./images/edu-icon.png" alt="" class="w-7 mt-3" />
               <h3 class="my-4 font-semibold text-gray-700">Education</h3>
-              <p class="text-gray-600 text-sm">BCA</p>
+              <p class="text-gray-600 text-sm">
+                BCA (Bachelor of Computer Applications)
+              </p>
             </li>
             <li
               class="border-[0.5px] border-gray-500 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
@@ -182,11 +187,11 @@
       <h4 class="text-center mb-2 text-lg">What i offer</h4>
       <h2 class="text-center text-5xl">My services</h2>
       <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-        I provide comprehensive digital solutions ranging from initial UI design to 
-        fully functional, responsive web and mobile applications.
+        I provide comprehensive digital solutions ranging from initial UI design
+        to fully functional, responsive web and mobile applications.
       </p>
       <div
-        class="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-4 gap-4 my-10"
+        class="grid grid-cols-auto md:grid-cols-2 lg:grid-cols-4 gap-4 my-10 service-card"
       >
         <div
           class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
@@ -194,7 +199,8 @@
           <img src="./images/web-icon.png" alt="" class="w-10" />
           <h3 class="text-lg my-4 text-gray-700">Web design</h3>
           <p class="text-sm text-gray-600 leading-5">
-            Building responsive, fast-loading websites using modern frameworks like React and Next.js.
+            Building responsive, fast-loading websites using modern frameworks
+            like React and Next.js.
           </p>
           <a href="" class="flex items-center gap-2 text-sm mt-5"
             >Read more
@@ -204,10 +210,11 @@
         <div
           class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
         >
-          <img src="./images/mobile-icon.png" alt="" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">Mobile app</h3>
+          <img src="./images/Maintenance.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">Website Maintenance</h3>
           <p class="text-sm text-gray-600 leading-5">
-            Creating cross-platform mobile experiences with clean architecture and smooth performance.
+            Update, optimize, and fix frontend issues to keep websites running
+            smoothly.
           </p>
           <a href="" class="flex items-center gap-2 text-sm mt-5"
             >Read more
@@ -220,7 +227,8 @@
           <img src="./images/ui-icon.png" alt="" class="w-10" />
           <h3 class="text-lg my-4 text-gray-700">UI/UX design</h3>
           <p class="text-sm text-gray-600 leading-5">
-            Designing user-centric interfaces that are intuitive, accessible, and visually striking.
+            Designing user-centric interfaces that are intuitive, accessible,
+            and visually striking.
           </p>
           <a href="" class="flex items-center gap-2 text-sm mt-5"
             >Read more
@@ -230,10 +238,12 @@
         <div
           class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
         >
-          <img src="./images/graphics-icon.png" alt="" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">Graphics design</h3>
+          <img src="./images/Optimization.png" alt="" class="w-10" />
+          <h3 class="text-lg my-4 text-gray-700">Performance Optimization</h3>
           <p class="text-sm text-gray-600 leading-5">
-            Developing brand identities and graphic assets that communicate your message effectively.
+            Improve website speed, loading times, and overall user experience.
+            Add animations, transitions, dark mode, and engaging interactions to
+            enhance usability.
           </p>
           <a href="" class="flex items-center gap-2 text-sm mt-5"
             >Read more
@@ -247,85 +257,103 @@
       <h4 class="text-center mb-2 text-lg">My portfolio</h4>
       <h2 class="text-center text-5xl">My latest work</h2>
       <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-        Explore a collection of my recent projects, showcasing my expertise in 
+        Explore a collection of my recent projects, showcasing my expertise in
         frontend architecture, animations, and API integrations.
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-5">
-        <div
-          class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-        >
-          <div
-            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+      <section class="carousel-section" aria-label="Creative work carousel">
+        <div class="carousel-shell">
+          <button
+            class="nav-btn"
+            id="prevBtn"
+            type="button"
+            aria-label="Previous project"
           >
-            <div>
-              <h2 class="font-semibold">Frontend project</h2>
-              <p class="text-sm text-gray-700">Web Design</p>
-            </div>
-            <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-            >
-              <img src="./images/send-icon.png" class="w-5" alt="" />
-            </div>
+            &#8249;
+          </button>
+
+          <div class="carousel" id="carousel">
+            <article class="card">
+              <div class="card__image">
+                <img src="./images/Gallery.png" alt="Image Gallery" />
+              </div>
+              <div class="card__content">
+                <h2>Image Gallery Application</h2>
+                <p>
+                  A Pinterest-inspired image gallery with category filtering,
+                  masonry layout, and smooth browsing experience.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__image">
+                <img src="./images/Asta.png" alt="Anime" />
+              </div>
+              <div class="card__content">
+                <h2>Anime Landing Page</h2>
+                <p>
+                  An immersive anime-themed landing page featuring smooth
+                  navigation, cinematic visuals, and engaging call-to-action
+                  sections.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__image">
+                <img src="./images/HunarHub.png" alt="HunarHub" />
+              </div>
+              <div class="card__content">
+                <h2>Marketplace Platform</h2>
+                <p>
+                  A modern marketplace landing page that connects skilled local
+                  artisans with customers through an intuitive and responsive
+                  interface.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__image">
+                <img src="./images/School.png" alt="Admin Dashboard" />
+              </div>
+              <div class="card__content">
+                <h2>School Erp Admin Dashboard</h2>
+                <p>
+                  A modern school management dashboard featuring analytics,
+                  attendance tracking, calendar integration, and responsive
+                  admin panels.
+                </p>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__image">
+                <img src="./images/Gym.png" alt="Gym" />
+              </div>
+              <div class="card__content">
+                <h2>Fitness Hub</h2>
+                <p>
+                  A responsive fitness landing page designed to promote gym
+                  memberships with compelling visuals, embedded media, and
+                  performance-focused UI.
+                </p>
+              </div>
+            </article>
           </div>
-        </div>
-        <div
-          class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-        >
-          <div
-            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
+
+          <button
+            class="nav-btn"
+            id="nextBtn"
+            type="button"
+            aria-label="Next project"
           >
-            <div>
-              <h2 class="font-semibold">E-commerce App</h2>
-              <p class="text-sm text-gray-700">Next.js & Tailwind</p>
-            </div>
-            <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-            >
-              <img src="./images/send-icon.png" class="w-5" alt="" />
-            </div>
-          </div>
+            &#8250;
+          </button>
         </div>
-        <div
-          class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-        >
-          <div
-            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
-          >
-            <div>
-              <h2 class="font-semibold">Dashboard UI</h2>
-              <p class="text-sm text-gray-700">React & Charts</p>
-            </div>
-            <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-            >
-              <img src="./images/send-icon.png" class="w-5" alt="" />
-            </div>
-          </div>
-        </div>
-        <div
-          class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-        >
-          <div
-            class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 cursor-pointer group-hover:bottom-7"
-          >
-            <div>
-              <h2 class="font-semibold">Weather API</h2>
-              <p class="text-sm text-gray-700">JavaScript Fetch</p>
-            </div>
-            <div
-              class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-            >
-              <img src="./images/send-icon.png" class="w-5" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <a
-        href="#"
-        class="w-max flex item-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20"
-      >
-        Show more</a
-      >
+
+        <div class="dots" id="dots" aria-label="Choose project"></div>
+      </section>
     </div>
     <!-- Contact-->
     <div
@@ -335,7 +363,7 @@
       <h4 class="text-center mb-2 text-lg">Connect with me</h4>
       <h2 class="text-center text-5xl">Get in touch</h2>
       <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-       I'm currently looking for new opportunities. Whether you have a question 
+        I'm currently looking for new opportunities. Whether you have a question
         or just want to say hi, I'll try my best to get back to you!
       </p>
 
@@ -393,7 +421,7 @@
       <div
         class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6"
       >
-        <p>2025 atul . All rights reserved</p>
+        <p>2026 atul . All rights reserved</p>
         <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
           <li><a href=""> GitHub</a></li>
           <li><a href=""> LinkedIn</a></li>

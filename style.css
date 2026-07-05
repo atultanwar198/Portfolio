@@ -1,18 +1,290 @@
 .imageReveal{
-    animation: imageReveal both ;
+    animation: imageReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
 }
 @keyframes imageReveal{
-    from{
+    0%{
         filter: saturate(0) contrast(4) brightness(.1) blur(5px);
         opacity: 0;
-        scale: .95;
-        translate: 0 4rem;
+        transform: scale(.95) translateX(-4rem);
     }
-    to{
+    30%, 70%{
         filter: none;
         opacity: 1;
-        scale: 1;
-        translate: 0 0;
+        transform: scale(1) translateY(0);
+    }
+    100%{
+        filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+        opacity: 0;
+        transform: scale(.95) translateX(-4rem);
     }
     
+}
+.about-section{
+    animation: about-section linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100% ;
+}
+@keyframes about-section{
+    0%{
+        transform: translateX(4rem);
+        opacity: 0;
+    }
+    30% , 70%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(4rem);
+        opacity: 0;
+    }
+}
+.service-card{
+    animation: service-card linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+@keyframes service-card{
+     0%{
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+    30% , 70%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+    
+}
+
+.carousel-section{
+    animation: carousel-section linear both;  
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+}
+@keyframes carousel-section{
+     0%{
+    
+        opacity: 0;
+    }
+    30% , 70%{
+      
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  
+
+}
+
+.carousel-section {
+  width: min(1180px, 100%);
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.carousel-shell {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-btn {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  border: 0;
+  border-radius: 50%;
+  color: #fff; 
+  background: #222;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #9e59ed;
+  transform: translateY(-2px);
+}
+
+.carousel {
+  min-height: 430px;
+  padding: 16px;
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border: 1px solid #e4e4e4;
+  border-radius: 20px;
+  background: #f7f7f7;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 170px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #e0c3f7;
+  opacity: 0.5;
+  cursor: pointer;
+  transform: scale(0.96);
+  transition:
+    flex-basis 0.45s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.card.active {
+  flex-basis: 380px;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card__image {
+  height: 280px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card__image img,
+.card.active .card__image img {
+  transform: scale(1.06);
+}
+
+.card__content {
+  min-height: 130px;
+  padding: 18px;
+}
+.card__content h2 {
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.card__content p {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  color: #606060;
+  font-size: 15px;
+  line-height: 1.5;
+  transition:
+    max-height 0.45s ease,
+    margin-top 0.45s ease;
+}
+
+.card.active .card__content p {
+  max-height: 80px;
+  margin-top: 10px;
+}
+
+
+.dots {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: #dea4ee;
+  cursor: pointer;
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.dot.active {
+  width: 30px;
+  border-radius: 999px;
+  background: #9e59ed;
+}
+
+@media (max-width: 850px) {
+  .carousel-section {
+    margin: 24px auto;
+    padding: 0 12px;
+  }
+
+  .carousel-shell {
+    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    gap: 10px;
+  }
+
+  .carousel {
+    min-height: 400px;
+    padding: 12px;
+    gap: 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card,
+  .card.active {
+    flex-basis: 78%;
+    scroll-snap-align: center;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .carousel-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .carousel {
+    min-height: auto;
+    border-radius: 16px;
+  }
+
+  .card,
+  .card.active {
+    flex-basis: 86%;
+  }
+
+  .card__image {
+    height: 250px;
+  }
+
+  .card__content {
+    min-height: 135px;
+    padding: 16px;
+  }
 }
